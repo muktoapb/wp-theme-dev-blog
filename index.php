@@ -51,7 +51,7 @@
                         'mid_size' => 2,
                         'screen_reader_text' => ' ',
                         'prev_text' => __( '<i class="fas fa-angle-left"></i>', 'mukto' ),
-                        'next_text' => __( '<i class="fas fa-align-right"></i>', 'mukto' ),
+                        'next_text' => __( '<i class="fas fa-angle-right"></i>', 'mukto' ),
                         ) ); ?>
                     </div>
 

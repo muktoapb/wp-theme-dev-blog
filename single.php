@@ -104,7 +104,7 @@
                                  <?php the_author_meta('description');?>
                             </p>
 
-                            <?php $authorid = get_the_author_meta('ID') ?>
+                            <?php $authorid = get_the_author_meta('ID'); ?>
                             <?php if( have_rows('author_social_link', 'user_'.$authorid) ): ?>
                             <div class="author_social_links">
 

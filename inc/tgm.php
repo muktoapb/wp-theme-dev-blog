@@ -11,11 +11,11 @@ function mukto_register_required_plugins() {
 	$plugins = array(
 		
 		// This is an example of how to include a plugin from the WordPress Plugin Repository.
-		array(
-			'name'      => 'Instagram Feed',
-			'slug'      => 'instagram-feed',
-			'required'  => true,
-		),
+		// array(
+		// 	'name'      => 'Instagram Feed',
+		// 	'slug'      => 'instagram-feed',
+		// 	'required'  => true,
+		// ),
 		array(
 			'name'      => 'Contact Form 7',
 			'slug'      => 'contact-form-7',
@@ -26,11 +26,11 @@ function mukto_register_required_plugins() {
 			'slug'      => 'advanced-custom-fields-font-awesome',
 			'required'  => true,
 		),
-		array(
-			'name'      => 'Newsletter',
-			'slug'      => 'newsletter',
-			'required'  => true,
-		),
+		// array(
+		// 	'name'      => 'Newsletter',
+		// 	'slug'      => 'newsletter',
+		// 	'required'  => true,
+		// ),
 		
 
 	);
