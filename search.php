@@ -10,7 +10,7 @@
         <div class="bredcam">
             <?php if(get_search_query()){
                 ?>
-            <h5 class="entry-title">Search Result for :
+            <h5 class="entry-title"> <?php __('Search Result for :', 'mukto'); ?>
                 <span>
                     <?php the_search_query(); ?></span>
             </h5>

@@ -7,7 +7,7 @@
         <div class="bredcam">
             <?php the_title( '<h3 class="entry-title">', '</h3>' ); ?>
             <p> <a href="<?php echo home_url(); ?>">Home</a> / <a
-                    href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">Blog </a>/
+                    href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>"> <?php __('Blog', 'mukto'); ?> </a>/
                 <?php the_title(); ?></p>
         </div>
     </div>

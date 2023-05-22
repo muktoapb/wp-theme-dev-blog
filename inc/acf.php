@@ -23,8 +23,8 @@ if( function_exists('acf_add_options_page') ) {
 
 
 //acf map
-function my_acf_init() {
+// function my_acf_init() {
 	
-	acf_update_setting('google_api_key', 'XXXXXXXXXXXXXXXXX');
-}
-add_action('acf/init', 'my_acf_init');
+// 	acf_update_setting('google_api_key', 'XXXXXXXXXXXXXXXXX');
+// }
+// add_action('acf/init', 'my_acf_init');

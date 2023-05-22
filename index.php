@@ -9,7 +9,7 @@
     <div class="container">
         <div class="bredcam">
             <h5><?php wp_title(' ', ' '); ?></h5>
-            <p><a href="<?php echo get_home_url()?>">Home </a><span>/</span> <?php wp_title(' ', ' '); ?></p>
+            <p><a href="<?php echo get_home_url()?>"> <?php __('Home', 'mukto'); ?> </a><span>/</span> <?php wp_title(' ', ' '); ?></p>
         </div>
 
     </div>

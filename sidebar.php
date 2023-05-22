@@ -9,15 +9,15 @@
 
 
 
-<!-- <div class="side_bar_search">
+ <div class="side_bar_search">
         <form action="<?php bloginfo( 'url' )?>">
-            <input type="text" name="s" placeholder="Pesquisar...">
+            <input type="text" name="s" placeholder="<?php __('Search', 'mukto'); ?>">
             <button><i class="fas fa-search"></i></button>
         </form>
     </div>
     <div class="category_wedget">
         <div class="wedget_title">
-            <h4 class="sborder">Categorias</h4>
+            <h4 class="sborder"><?php __('Categories', 'mukto'); ?></h4>
         </div>
         <ul>
             <?php wp_list_categories(array(
@@ -27,7 +27,7 @@
     </div>
     <div class="tag_sidebar">
         <div class="wedget_title">
-            <h4 class="sborder">Tag</h4>
+            <h4 class="sborder"><?php __('Tags', 'mukto'); ?></h4>
         </div>
         <div class="tag_list">
             <ul class="tags">
@@ -44,4 +44,4 @@
                 <?php endif; ?>
             </ul>
         </div>
-    </div> -->
+    </div> 

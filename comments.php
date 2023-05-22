@@ -21,9 +21,9 @@ if ( post_password_required() ) {
     <div class="number_title">
 	<?php  $comments_number = get_comments_number();
         if (1>=$comments_number) {
-            echo '<h4>'.$comments_number.' Comentário</h4>';
+            echo '<h4>'.$comments_number.' Comment</h4>';
         }else{
-            echo '<h4>'.$comments_number.' Comentários</h4>';
+            echo '<h4>'.$comments_number.' Comments</h4>';
         } ?>
 	</div>
    <ul>
@@ -39,7 +39,7 @@ if ( post_password_required() ) {
    <?php // If comments are closed and there are comments, let's leave a little note, shall we?
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
-		<p class="no-comments"><?php _e( 'Comentários estão fechados.', 'mukto_shop' ); ?></p>
+		<p class="no-comments"><?php _e( 'No Comment Found.', 'mukto' ); ?></p>
 	<?php
 	endif;
 ?>
@@ -49,8 +49,8 @@ if ( post_password_required() ) {
    
     <div class="comments_pagiantion">
         <?php the_comments_pagination(array(
-            'prev_text'=>'anterior',
-            'next_text'=>'Próxima',
+            'prev_text'=>__( 'Prev', 'mukto' ),
+            'next_text'=>__( 'Next', 'mukto' ),
             'screen_reader_text'=>' ',
         )) ?>
     </div>
