@@ -34,13 +34,24 @@
                     </a>
                 </div>
                 <div class="responsive"><i data-icon="m" class="icon"></i></div>
-                <ul class="nav-menu">
+                <!-- <ul class="nav-menu">
                     <li><a href="#home" class="smoothScroll">Home</a></li>
                     <li><a href="#about" class="smoothScroll">About</a></li>
                     <li><a href="#portfolio" class="smoothScroll">Portfolio</a></li>
                     <li><a href="#blog" class="smoothScroll">Blog</a></li>
                     <li><a href="#contact" class="smoothScroll">Contact</a></li>
-                </ul>
+                </ul> -->
+                <?php 
+    wp_nav_menu(array(
+                            'theme_location' => 'header_menu',
+                            'container' => '',
+                            'container_class' => '',
+                            'menu_class' => 'nav-menu',
+                            'menu_id' => 'header_menu',
+                            'depth' => '3',
+                            
+                        )); 
+                        ?>
             </div>
         </div>
     </nav>
