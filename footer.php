@@ -1,22 +1,22 @@
-<footer id="footer">
-    <!-- <div class="footer_menu">
-        <?php wp_nav_menu(array(
-            'theme_location' => 'footer_menu',
-            'container' => 'nav',
-            'container_class' => '',
-            'menu_class' => 'footer-menu',
-            'menu_id' => 'footermenu',
-            'depth' => '0',
-            'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
-            'walker' => new WP_Bootstrap_Navwalker()
-        )); 
-         ?>
-    </div> -->
 
-</footer>
-
-
-<?php wp_footer(); ?>
+<footer>
+        <div class="container">
+            <div class="social">
+                <a href="#">facebook </a>
+                <a href="#">twitter </a>
+                <a href="#">instagram </a>
+                <a href="#">google plus </a>
+                <a href="#">behance </a>
+                <a href="#">dribbble  </a>
+            </div>
+            <?php if ( get_field('copyright_text', 'option') ) : ?>
+                <?php echo get_field('copyright_text', 'option'); ?>
+            <?php endif; ?>
+        </div>
+    </footer>
+    
+    <?php wp_footer(); ?>
+    
+ 
 </body>
-
 </html>
