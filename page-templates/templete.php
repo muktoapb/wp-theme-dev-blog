@@ -6,18 +6,26 @@
 <?php get_header(); ?>
 
         <!--HOME-->
-        <section class="home" id="home"> 
+        <section class="home" id="home" style="background:url(<?php the_field('hero_background')?>) 50% 50% fixed"> 
                 <div class="home-content">
                     <div class="container">
-                        <h1>We Are <span class="element" data-text1="Berlin" data-text2="Creative" data-loop="true" data-backdelay="3000"></span></h1> 
-                        <div class="social">
-                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>  </a>
-                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>  </a>
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>  </a>
-                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i>  </a>
-                            <a href="#"><i class="fa fa-behance" aria-hidden="true"></i>  </a>
-                            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i>  </a>
+                        <h1><?php echo get_field('main_heading'); ?> <span class="element" data-text1="<?php echo get_field('animated_text_1'); ?>" data-text2="<?php echo get_field('animated_text_2'); ?>" data-loop="true" data-backdelay="3000"></span></h1> 
+
+                        <?php if ( have_rows('social') ) : ?>
+                            <div class="social">
+                            <?php while( have_rows('social') ) : the_row(); ?>
+                        <a href="<?php the_sub_field('url'); ?>" target="_blank" rel="noopener noreferrer">
+                        <?php the_sub_field('icon'); ?>
+                    </a>
+                                
+                        
+                            <?php endwhile; ?>
                         </div>
+                            
+                        
+                        <?php endif; ?>
+                        
+                        
                         <a class="home-down bounce" href="#about"><i class="fa fa-angle-down"></i></a>
                     </div>
                 </div>
