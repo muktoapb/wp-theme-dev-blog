@@ -44,85 +44,47 @@
                     <!-- about image -->
                     <div class="col-md-4 col-sm-12 about-image top_30 wow fadeInUp"  data-wow-delay="0.4s">
                         <div class="row">
-                            <img src="images/profile-2.jpg" alt="">
+                           <?php if ( get_field('about_image') ) : $image = get_field('about_image'); ?>
+                            <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>"/>
+                           
+                           <?php endif; ?>
+                           
                         </div>
                     </div>
                     <!-- about text -->
                     <div class="col-md-7 col-md-offset-1 col-sm-12 about-text wow fadeInUp"  data-wow-delay="0.6s">
                         <div class="section-title dleft bottom_30">
                           <br>
-                            <h2>ABOUT US</h2>
+                           <?php if ( get_field('about_heading') ) : ?>
+                           <h2><?php echo get_field('about_heading'); ?></h2>
+                           <?php endif; ?>
+                           
                         </div>
-                        <p>For instance, whenever I go back to the guest house during the <b>morning</b> to copy out the contract, <b>these gentlemen</b> are always still sitting there eating their breakfasts. I ought to just try that witht my boss; I'd get kicked out on the spot. 
-                            
-                        <br><br>
-                            But who knows, maybe that would be the best thing for me. He'd fall right off his desk! And it's a funny sort of business to be sitting up there at your desk, talking down at your subordinates. I ought to just try that witht my boss; I'd get kicked out on the spot. But who knows, maybe that would be the best thing for me. He'd fall right off his desk! And it's a funny sort of business to be sitting up there at your desk, talking down at your subordinates. 
-                        </p>
+                        <?php echo get_field('about_content'); ?>
                     </div>
                     
                     <!-- work areas -->
-                    <div class="owl-carousel work-areas top_120 bottom_120 wow fadeInUp" data-pagination="false" data-autoplay="3000" data-items-desktop="3" data-items-desktop-small="3" data-items-tablet="2" data-items-tablet-small="1"  data-wow-delay="0.4s">
-                        <!-- an area -->
+                    <?php if ( have_rows('services_slider') ) : ?>
+                        <div class="owl-carousel work-areas top_120 bottom_120 wow fadeInUp" data-pagination="false" data-autoplay="3000" data-items-desktop="3" data-items-desktop-small="3" data-items-tablet="2" data-items-tablet-small="1"  data-wow-delay="0.4s">
+                        
+                        <?php while( have_rows('services_slider') ) : the_row(); ?>
+                    
                         <div class="area col-md-12 item">
                             <div class="icon">
-                                <i data-icon="1" class="icon"></i>
+                                <?php echo get_sub_field('icon'); ?>
                             </div>
                             <div class="text">
-                                <h6>Web Design</h6>
-                                <p>Cloud agency follows the latest design standards to deliver a beautiful and functional digital product.</p>
+                                <h6><?php echo get_sub_field('title'); ?></h6>
+                                <p><?php echo get_sub_field('details'); ?></p>
                             </div>
                         </div>
-                        <!-- an area -->
-                        <div class="area col-md-12 item">
-                            <div class="icon">
-                                <i data-icon="!" class="icon"></i>
-                            </div>
-                            <div class="text">
-                                <h6>Branding Identity</h6>
-                                <p>We will make you a brand that is catchy and leaves a trace. Your target group will never forget you.</p>
-                            </div>
-                        </div>
-                        <!-- an area -->
-                        <div class="area col-md-12 item">
-                            <div class="icon">
-                                <i data-icon="#" class="icon"></i>
-                            </div>
-                            <div class="text">
-                                <h6>Illustrator</h6>
-                                <p>I ought to just try that with my boss; I'd get kicked out on the spot. But who knows, maybe that would be the best thing me. </p>
-                            </div>
-                        </div>
-                        <!-- an area -->
-                        <div class="area col-md-12 item">
-                            <div class="icon">
-                                <i data-icon="1" class="icon"></i>
-                            </div>
-                            <div class="text">
-                                <h6>Web Design</h6>
-                                <p>Cloud agency follows the latest design standards to deliver a beautiful and functional digital product.</p>
-                            </div>
-                        </div>
-                        <!-- an area -->
-                        <div class="area col-md-12 item">
-                            <div class="icon">
-                                <i data-icon="!" class="icon"></i>
-                            </div>
-                            <div class="text">
-                                <h6>Branding Identity</h6>
-                                <p>We will make you a brand that is catchy and leaves a trace. Your target group will never forget you.</p>
-                            </div>
-                        </div>
-                        <!-- an area -->
-                        <div class="area col-md-12 item">
-                            <div class="icon">
-                                <i data-icon="#" class="icon"></i>
-                            </div>
-                            <div class="text">
-                                <h6>Illustrator</h6>
-                                <p>I ought to just try that with my boss; I'd get kicked out on the spot. But who knows, maybe that would be the best thing me. </p>
-                            </div>
-                        </div>
+                    
+                        <?php endwhile; ?>
+                    
                     </div>
+                    <?php endif; ?>
+                    
+                   
 
                 </div>
             <svg class="diagonal-gray" width="100%" height="170" viewBox="0 0 100 102" preserveAspectRatio="none">
